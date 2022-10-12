@@ -1,0 +1,8 @@
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\bin\Debug\Client.exe.config
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\bin\Debug\Client.exe
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\bin\Debug\Client.pdb
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\obj\Debug\Client.exe
+C:\Users\s7kov\source\repos\wcf-assignment1\WcfService\Client\obj\Debug\Client.pdb
