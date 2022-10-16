@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50498/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50498/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50498/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfService_CheckIfPrimeNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfPrimeNumber" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_CheckIfPrimeNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIfPrimeNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_AddDigits_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDigits" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_AddDigits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDigitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_ReverseString_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseString" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_ReverseString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReverseStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_PrintHtmlTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintHtmlTag" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_PrintHtmlTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintHtmlTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_SortNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortNumbers" />
+  </wsdl:message>
+  <wsdl:message name="IWcfService_SortNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortNumbersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfService">
+    <wsdl:operation name="CheckIfPrimeNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfService/CheckIfPrimeNumber" message="tns:IWcfService_CheckIfPrimeNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfService/CheckIfPrimeNumberResponse" message="tns:IWcfService_CheckIfPrimeNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDigits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfService/AddDigits" message="tns:IWcfService_AddDigits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfService/AddDigitsResponse" message="tns:IWcfService_AddDigits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReverseString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfService/ReverseString" message="tns:IWcfService_ReverseString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfService/ReverseStringResponse" message="tns:IWcfService_ReverseString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintHtmlTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfService/PrintHtmlTag" message="tns:IWcfService_PrintHtmlTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfService/PrintHtmlTagResponse" message="tns:IWcfService_PrintHtmlTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortNumbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfService/SortNumbers" message="tns:IWcfService_SortNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfService/SortNumbersResponse" message="tns:IWcfService_SortNumbers_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfService" type="tns:IWcfService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckIfPrimeNumber">
+      <soap:operation soapAction="http://tempuri.org/IWcfService/CheckIfPrimeNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDigits">
+      <soap:operation soapAction="http://tempuri.org/IWcfService/AddDigits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReverseString">
+      <soap:operation soapAction="http://tempuri.org/IWcfService/ReverseString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintHtmlTag">
+      <soap:operation soapAction="http://tempuri.org/IWcfService/PrintHtmlTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortNumbers">
+      <soap:operation soapAction="http://tempuri.org/IWcfService/SortNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IWcfService" binding="tns:BasicHttpBinding_IWcfService">
+      <soap:address location="http://localhost:50498/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
